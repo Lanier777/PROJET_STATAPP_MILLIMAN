@@ -27,5 +27,20 @@ L’objectif principal est de **mettre en œuvre et d’évaluer des techniques 
 
 ---
 
+### Plan du projet 
+Le projet contient 3 dossiers dont un dossier annexe. 
+   
+   1. Analyse descriptive "Fraud Detection Dataset"
+   Cette partie est une analyse descriptive du jeu de données utilisé. Elle permet une première familiarisation avec le dataset utilisé. Elle comprend notamment des statistiques descriptives, une mise en évidence du déséquilibre des classes du jeu de données ainsi qu'une étude sur la distribution et la nature des valeurs manquantes présentes. 
+
+   2. Génération de données synthétiques
+   Ce dossier contient les deux parties de génération synthétiques du projet. 
+   D'une part la partie "Modèles Statistiques" et d'autre part la partie "LLMs".
+
+   La partie "Modèles Statistiques" s'intéresse à la génération de données synthétiques grâce à des méthodes statistiques. 
+   L'algorithme utilisé est le SMOTE qui permet de rééquilibrer le jeu de données. 
+
+   La partie "LLMs" quant à elle s'intéresse à la génération de données synthétiques directement grâce à des LLMs.
+
 
 
