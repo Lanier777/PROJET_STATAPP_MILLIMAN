@@ -1,5 +1,5 @@
 {
-  "expert_comment": "This DAG captures the causal mechanisms: account age influences transaction behavior which in turn influences the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
+  "expert_commentary": "This DAG captures the causal mechanisms: account age influences transaction behavior which in turn influences the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
   "noeuds": [
     "Account_Age",
     "Location",
@@ -7,15 +7,15 @@
     "Number_of_Transactions_Last_24H",
     "Time_of_Transaction",
     "Device_Used",
+    "Transaction_Amount",
     "Payment_Method",
-    "Transaction_Type",
     "Fraudulent"
   ],
   "liens": [
     {
       "de": "Account_Age",
       "vers": "Number_of_Transactions_Last_24H",
-      "raison": "Young accounts have less historical transactions"
+      "raison": "Younger accounts have less transaction history"
     },
     {
       "de": "Location",
@@ -23,19 +23,34 @@
       "raison": "Location influences the device used"
     },
     {
+      "de": "Time_of_Transaction",
+      "vers": "Transaction_Amount",
+      "raison": "Time of transaction influences transaction amount"
+    },
+    {
+      "de": "Account_Age",
+      "vers": "Transaction_Amount",
+      "raison": "Older accounts have more normal transaction amounts"
+    },
+    {
       "de": "Device_Used",
       "vers": "Payment_Method",
-      "raison": "Device used influences payment method"
+      "raison": "Device used determines payment method"
     },
     {
       "de": "Previous_Fraudulent_Transactions",
       "vers": "Fraudulent",
-      "raison": "Previous fraudulent transactions influence current behavior"
+      "raison": "Previous fraudulent transactions increase the likelihood of current fraud"
     },
     {
       "de": "Number_of_Transactions_Last_24H",
       "vers": "Fraudulent",
       "raison": "Abnormally high activity is a signal of fraud"
+    },
+    {
+      "de": "Transaction_Amount",
+      "vers": "Fraudulent",
+      "raison": "Anomalous transaction amounts are a signal of fraud"
     }
   ]
 }
