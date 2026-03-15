@@ -1,0 +1,6 @@
+{
+  "mecanismes_causaux": "The variables interact to produce fraud by certain locations having higher rates of fraud for specific transaction types, using particular devices, and preferring certain payment methods. The number of transactions in the last 24 hours and time of transaction also contribute to the likelihood of fraud.",
+  "signaux_fraude": "Key indicators of fraud include unusual location, uncommon transaction type, use of suspicious devices, preferred payment methods associated with fraud, high number of transactions within a short period, and specific times of transactions.",
+  "recommandations": "To improve detection, consider implementing geolocation verification for transactions, monitoring accounts with an increased number of transactions in the last 24 hours, analyzing transaction patterns during peak hours, and regularly updating fraud risk profiles based on device usage and preferred payment methods.",
+  "vulnerabilites": "Two exploitable vulnerabilities for fraudsters are the potential misuse of less secure devices and targeting accounts with a high number of transactions in a short period."
+}

@@ -1,56 +1,103 @@
 {
-  "expert_commentary": "This DAG captures the causal mechanisms: account age influences transaction behavior which in turn influences the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
   "noeuds": [
     "Account_Age",
     "Location",
-    "Previous_Fraudulent_Transactions",
-    "Number_of_Transactions_Last_24H",
-    "Time_of_Transaction",
+    "Transaction_Type",
     "Device_Used",
-    "Transaction_Amount",
+    "Number_of_Transactions_Last_24H",
     "Payment_Method",
+    "Time_of_Transaction",
     "Fraudulent"
   ],
   "liens": [
     {
-      "de": "Account_Age",
-      "vers": "Number_of_Transactions_Last_24H",
-      "raison": "Younger accounts have less transaction history"
+      "de": "Location",
+      "vers": "Fraudulent",
+      "raison": "Some locations have higher rates of fraud",
+      "score_brut": 1.5,
+      "confiance": 0.3462380168357166,
+      "confiance_pct": "34.6%"
+    },
+    {
+      "de": "Transaction_Type",
+      "vers": "Fraudulent",
+      "raison": "Online purchases, POS payments, bill payments, bank transfers, and ATM withdrawals can potentially involve fraud",
+      "score_brut": 1.0,
+      "confiance": 0.12737384814583186,
+      "confiance_pct": "12.7%"
+    },
+    {
+      "de": "Device_Used",
+      "vers": "Fraudulent",
+      "raison": "Certain devices might be more susceptible to fraud",
+      "score_brut": 1.0,
+      "confiance": 0.12737384814583186,
+      "confiance_pct": "12.7%"
+    },
+    {
+      "de": "Payment_Method",
+      "vers": "Fraudulent",
+      "raison": "Different payment methods may involve varying levels of risk for fraud",
+      "score_brut": 1.0,
+      "confiance": 0.12737384814583186,
+      "confiance_pct": "12.7%"
+    },
+    {
+      "de": "Location",
+      "vers": "Transaction_Type",
+      "raison": "Different locations might prefer different transaction types",
+      "score_brut": 0.75,
+      "confiance": 0.07725614414602817,
+      "confiance_pct": "7.7%"
     },
     {
       "de": "Location",
       "vers": "Device_Used",
-      "raison": "Location influences the device used"
-    },
-    {
-      "de": "Time_of_Transaction",
-      "vers": "Transaction_Amount",
-      "raison": "Time of transaction influences transaction amount"
-    },
-    {
-      "de": "Account_Age",
-      "vers": "Transaction_Amount",
-      "raison": "Older accounts have more normal transaction amounts"
+      "raison": "Different devices might be preferred in certain locations",
+      "score_brut": 0.75,
+      "confiance": 0.07725614414602817,
+      "confiance_pct": "7.7%"
     },
     {
       "de": "Device_Used",
       "vers": "Payment_Method",
-      "raison": "Device used determines payment method"
+      "raison": "Different devices may prefer certain payment methods",
+      "score_brut": 0.5,
+      "confiance": 0.04685822007574478,
+      "confiance_pct": "4.7%"
     },
     {
-      "de": "Previous_Fraudulent_Transactions",
+      "de": "Time_of_Transaction",
       "vers": "Fraudulent",
-      "raison": "Previous fraudulent transactions increase the likelihood of current fraud"
+      "raison": "Peak hours or specific times might have higher chances of fraud",
+      "score_brut": 0.02110519504151239,
+      "confiance": 0.017981381088308376,
+      "confiance_pct": "1.8%"
     },
     {
       "de": "Number_of_Transactions_Last_24H",
       "vers": "Fraudulent",
-      "raison": "Abnormally high activity is a signal of fraud"
+      "raison": "Accounts with a higher number of transactions in the last 24 hours might be riskier",
+      "score_brut": 0.007753170989822537,
+      "confiance": 0.01750756004939359,
+      "confiance_pct": "1.8%"
     },
     {
-      "de": "Transaction_Amount",
-      "vers": "Fraudulent",
-      "raison": "Anomalous transaction amounts are a signal of fraud"
+      "de": "Time_of_Transaction",
+      "vers": "Account_Age",
+      "raison": "Older accounts may have more transactions during certain times",
+      "score_brut": 0.004582714537434911,
+      "confiance": 0.017396897357975248,
+      "confiance_pct": "1.7%"
+    },
+    {
+      "de": "Account_Age",
+      "vers": "Number_of_Transactions_Last_24H",
+      "raison": "Older accounts may have more transactions",
+      "score_brut": 0.004214539406961192,
+      "confiance": 0.01738409186330931,
+      "confiance_pct": "1.7%"
     }
-  ]
+  ],
+  "commentaire_expert": "This DAG represents a causal relationship between the given variables. Older accounts tend to have more transactions, which can potentially involve fraud. The location, transaction type, device used, payment method, time of transaction, and transaction amount all play a role in determining whether a transaction is fraudulent or not."
 }
