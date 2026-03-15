@@ -1,3 +1,64 @@
 {
-  "transactions": []
+  "transactions": [
+    {
+      "User_ID": "USR_7719",
+      "Account_Age": 3,
+      "Previous_Fraudulent_Transactions": 4,
+      "Number_of_Transactions_Last_24H": 15,
+      "Transaction_Amount": 2800,
+      "Transaction_Type": "Online Purchase",
+      "Device_Used": "Smartphone",
+      "Location": "Los Angeles",
+      "Time_of_Transaction": 19,
+      "Fraudulent": 1
+    },
+    {
+      "User_ID": "USR_2204",
+      "Account_Age": 6,
+      "Previous_Fraudulent_Transactions": 7,
+      "Number_of_Transactions_Last_24H": 18,
+      "Transaction_Amount": 3200,
+      "Transaction_Type": "ATM Withdrawal",
+      "Device_Used": "Laptop",
+      "Location": "Chicago",
+      "Time_of_Transaction": 6,
+      "Fraudulent": 1
+    },
+    {
+      "User_ID": "USR_4432",
+      "Account_Age": 5,
+      "Previous_Fraudulent_Transactions": 2,
+      "Number_of_Transactions_Last_24H": 10,
+      "Transaction_Amount": 2000,
+      "Transaction_Type": "POS Payment",
+      "Device_Used": "Desktop",
+      "Location": "New York",
+      "Time_of_Transaction": 20,
+      "Fraudulent": 1
+    },
+    {
+      "User_ID": "USR_6658",
+      "Account_Age": 4,
+      "Previous_Fraudulent_Transactions": 6,
+      "Number_of_Transactions_Last_24H": 13,
+      "Transaction_Amount": 3000,
+      "Transaction_Type": "Bank Transfer",
+      "Device_Used": "Smartwatch",
+      "Location": "Miami",
+      "Time_of_Transaction": 15,
+      "Fraudulent": 1
+    },
+    {
+      "User_ID": "USR_9987",
+      "Account_Age": 2,
+      "Previous_Fraudulent_Transactions": 0,
+      "Number_of_Transactions_Last_24H": 11,
+      "Transaction_Amount": 2500,
+      "Transaction_Type": "Bill Payment",
+      "Device_Used": "Smartphone",
+      "Location": "San Francisco",
+      "Time_of_Transaction": 23,
+      "Fraudulent": 1
+    }
+  ]
 }
