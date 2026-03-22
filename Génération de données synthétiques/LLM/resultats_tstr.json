@@ -11,24 +11,24 @@
       "threshold": 0.05
     },
     "TSTR": {
-      "auc": 0.495,
-      "accuracy": 0.9346,
-      "recall": 0.0458,
-      "specificity": 0.9712,
-      "precision": 0.0762,
-      "f1": 0.0572,
-      "youden": 0.017,
-      "threshold": 0.41
+      "auc": 0.4988,
+      "accuracy": 0.9508,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "youden": 0.0,
+      "threshold": Infinity
     },
     "TSAR": {
-      "auc": 0.5194,
-      "accuracy": 0.9507,
-      "recall": 0.0637,
-      "specificity": 0.9714,
-      "precision": 0.1036,
-      "f1": 0.0789,
-      "youden": 0.0352,
-      "threshold": 0.2
+      "auc": 0.4983,
+      "accuracy": 0.952,
+      "recall": 0.0339,
+      "specificity": 0.998,
+      "precision": 0.4722,
+      "f1": 0.0632,
+      "youden": 0.0319,
+      "threshold": 0.25
     }
   },
   "LogisticReg": {
@@ -43,24 +43,24 @@
       "threshold": 0.0591
     },
     "TSTR": {
-      "auc": 0.5111,
-      "accuracy": 0.7778,
-      "recall": 0.3406,
-      "specificity": 0.702,
-      "precision": 0.0559,
-      "f1": 0.096,
-      "youden": 0.0426,
-      "threshold": 0.3554
+      "auc": 0.5027,
+      "accuracy": 0.9503,
+      "recall": 0.0498,
+      "specificity": 0.9623,
+      "precision": 0.0639,
+      "f1": 0.056,
+      "youden": 0.0121,
+      "threshold": 0.0
     },
     "TSAR": {
-      "auc": 0.5045,
-      "accuracy": 0.9453,
-      "recall": 0.4442,
-      "specificity": 0.5803,
-      "precision": 0.0519,
-      "f1": 0.093,
-      "youden": 0.0245,
-      "threshold": 0.1019
+      "auc": 0.5195,
+      "accuracy": 0.911,
+      "recall": 0.7351,
+      "specificity": 0.3165,
+      "precision": 0.0527,
+      "f1": 0.0984,
+      "youden": 0.0515,
+      "threshold": 0.0185
     }
   },
   "SVM": {
@@ -75,24 +75,24 @@
       "threshold": 0.0508
     },
     "TSTR": {
-      "auc": 0.5183,
-      "accuracy": 0.4436,
-      "recall": 0.7829,
-      "specificity": 0.2731,
-      "precision": 0.0528,
-      "f1": 0.0989,
-      "youden": 0.056,
-      "threshold": 0.0615
+      "auc": 0.5032,
+      "accuracy": 0.9397,
+      "recall": 0.0159,
+      "specificity": 0.9928,
+      "precision": 0.1026,
+      "f1": 0.0276,
+      "youden": 0.0087,
+      "threshold": 0.1282
     },
     "TSAR": {
-      "auc": 0.4907,
-      "accuracy": 0.9508,
-      "recall": 0.3566,
-      "specificity": 0.661,
-      "precision": 0.0516,
-      "f1": 0.0902,
-      "youden": 0.0175,
-      "threshold": 0.1534
+      "auc": 0.501,
+      "accuracy": 0.9217,
+      "recall": 0.259,
+      "specificity": 0.7916,
+      "precision": 0.0604,
+      "f1": 0.098,
+      "youden": 0.0506,
+      "threshold": 0.0782
     }
   },
   "LightGBM": {
@@ -108,24 +108,24 @@
     },
     "TSTR": {
       "auc": 0.4949,
-      "accuracy": 0.9347,
-      "recall": 0.0797,
-      "specificity": 0.9386,
-      "precision": 0.063,
-      "f1": 0.0704,
-      "youden": 0.0183,
-      "threshold": 0.1252
+      "accuracy": 0.9508,
+      "recall": 0.0578,
+      "specificity": 0.9597,
+      "precision": 0.069,
+      "f1": 0.0629,
+      "youden": 0.0175,
+      "threshold": 0.0001
     },
     "TSAR": {
-      "auc": 0.4956,
-      "accuracy": 0.9492,
-      "recall": 0.1554,
-      "specificity": 0.8767,
-      "precision": 0.0612,
-      "f1": 0.0878,
-      "youden": 0.0321,
-      "threshold": 0.0772
+      "auc": 0.4995,
+      "accuracy": 0.9508,
+      "recall": 0.9442,
+      "specificity": 0.0715,
+      "precision": 0.05,
+      "f1": 0.095,
+      "youden": 0.0157,
+      "threshold": 0.0303
     }
   },
-  "tstr_score": 1.0242
+  "tstr_score": 1.0138
 }
