@@ -1,0 +1,102 @@
+{
+  "Location": {
+    "parents": [],
+    "etats": [
+      "Boston",
+      "Chicago",
+      "Houston",
+      "Los Angeles",
+      "Miami",
+      "New York",
+      "San Francisco",
+      "Seattle"
+    ],
+    "table": {}
+  },
+  "Time_of_Transaction": {
+    "parents": [],
+    "etats": [
+      "apres-midi(12-17)",
+      "matin(6-11)",
+      "nuit(0-5)",
+      "soir(18-23)"
+    ],
+    "table": {}
+  },
+  "Transaction_Type": {
+    "parents": [
+      "Location"
+    ],
+    "etats": [
+      "ATM Withdrawal",
+      "Bank Transfer",
+      "Bill Payment",
+      "Online Purchase",
+      "POS Payment"
+    ],
+    "table": {}
+  },
+  "Device_Used": {
+    "parents": [
+      "Location"
+    ],
+    "etats": [
+      "Desktop",
+      "Mobile",
+      "Tablet",
+      "Unknown Device"
+    ],
+    "table": {}
+  },
+  "Account_Age": {
+    "parents": [
+      "Time_of_Transaction"
+    ],
+    "etats": [
+      "established",
+      "new",
+      "old",
+      "very_new"
+    ],
+    "table": {}
+  },
+  "Payment_Method": {
+    "parents": [
+      "Device_Used"
+    ],
+    "etats": [
+      "Credit Card",
+      "Debit Card",
+      "Invalid Method",
+      "Net Banking",
+      "UPI"
+    ],
+    "table": {}
+  },
+  "Number_of_Transactions_Last_24H": {
+    "parents": [
+      "Account_Age"
+    ],
+    "etats": [
+      "eleve",
+      "faible",
+      "moyen"
+    ],
+    "table": {}
+  },
+  "Fraudulent": {
+    "parents": [
+      "Device_Used",
+      "Location",
+      "Number_of_Transactions_Last_24H",
+      "Payment_Method",
+      "Time_of_Transaction",
+      "Transaction_Type"
+    ],
+    "etats": [
+      "0",
+      "1"
+    ],
+    "table": {}
+  }
+}
