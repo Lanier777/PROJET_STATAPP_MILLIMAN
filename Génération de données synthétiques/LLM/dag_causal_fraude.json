@@ -1,12 +1,12 @@
 {
-  "expert_commentary": "This DAG captures the causal mechanisms: account age influences transaction behavior, which in turn affects the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
+  "expert_comment": "This DAG captures the causal mechanisms: account age influences transaction behavior, which in turn influences the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
   "noeuds": [
     "Account_Age",
     "Location",
     "Previous_Fraudulent_Transactions",
     "Number_of_Transactions_Last_24H",
-    "Time_of_Transaction",
     "Device_Used",
+    "Time_of_Transaction",
     "Transaction_Amount",
     "Payment_Method",
     "Fraudulent"
@@ -30,7 +30,7 @@
     {
       "de": "Account_Age",
       "vers": "Transaction_Amount",
-      "raison": "Older accounts have higher average transaction amounts"
+      "raison": "Older accounts have more transactions and larger amounts"
     },
     {
       "de": "Device_Used",
@@ -40,17 +40,17 @@
     {
       "de": "Previous_Fraudulent_Transactions",
       "vers": "Fraudulent",
-      "raison": "Previous fraudulent transactions increase the likelihood of current fraud"
+      "raison": "Previous fraudulent transactions influence current behavior"
     },
     {
       "de": "Number_of_Transactions_Last_24H",
       "vers": "Fraudulent",
-      "raison": "Abnormal transaction activity is a signal of fraud"
+      "raison": "Abnormal activity is a signal of fraud"
     },
     {
       "de": "Transaction_Amount",
       "vers": "Fraudulent",
-      "raison": "Anomalous transaction amounts are a signal of fraud"
+      "raison": "Large transaction amounts are a signal of fraud"
     }
   ]
 }

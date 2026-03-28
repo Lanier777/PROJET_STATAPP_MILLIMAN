@@ -1,0 +1,107 @@
+{
+  "RandomForest": {
+    "TRTR": {
+      "protocol": "Train Réel / Test Réel (baseline)",
+      "auc": 0.5907,
+      "recall": 0.2311,
+      "precision": 0.0935,
+      "f1": 0.1331,
+      "specificity": 0.884,
+      "youden": 0.1151,
+      "accuracy": 0.8519,
+      "threshold": 0.11
+    },
+    "SMOTE": {
+      "protocol": "Train Réel+SMOTE / Test Réel",
+      "auc": 0.5592,
+      "recall": 0.6056,
+      "precision": 0.0584,
+      "f1": 0.1065,
+      "specificity": 0.4944,
+      "youden": 0.1,
+      "accuracy": 0.4999,
+      "threshold": 0.11
+    },
+    "TSAR": {
+      "protocol": "Train Réel+pgmpy / Test Réel",
+      "auc": 0.5813,
+      "recall": 0.3147,
+      "precision": 0.0753,
+      "f1": 0.1215,
+      "specificity": 0.7999,
+      "youden": 0.1146,
+      "accuracy": 0.776,
+      "threshold": 0.14
+    }
+  },
+  "LightGBM": {
+    "TRTR": {
+      "protocol": "Train Réel / Test Réel (baseline)",
+      "auc": 0.6081,
+      "recall": 0.8028,
+      "precision": 0.0594,
+      "f1": 0.1106,
+      "specificity": 0.342,
+      "youden": 0.1448,
+      "accuracy": 0.3647,
+      "threshold": 0.0261
+    },
+    "SMOTE": {
+      "protocol": "Train Réel+SMOTE / Test Réel",
+      "auc": 0.6119,
+      "recall": 0.6255,
+      "precision": 0.0647,
+      "f1": 0.1172,
+      "specificity": 0.5317,
+      "youden": 0.1572,
+      "accuracy": 0.5363,
+      "threshold": 0.0555
+    },
+    "TSAR": {
+      "protocol": "Train Réel+pgmpy / Test Réel",
+      "auc": 0.6111,
+      "recall": 0.8187,
+      "precision": 0.0596,
+      "f1": 0.1112,
+      "specificity": 0.3316,
+      "youden": 0.1503,
+      "accuracy": 0.3556,
+      "threshold": 0.0344
+    }
+  },
+  "LogisticRegression": {
+    "TRTR": {
+      "protocol": "Train Réel / Test Réel (baseline)",
+      "auc": 0.4834,
+      "recall": 0.8944,
+      "precision": 0.0508,
+      "f1": 0.0962,
+      "specificity": 0.1358,
+      "youden": 0.0302,
+      "accuracy": 0.1731,
+      "threshold": 0.0436
+    },
+    "SMOTE": {
+      "protocol": "Train Réel+SMOTE / Test Réel",
+      "auc": 0.5053,
+      "recall": 0.8665,
+      "precision": 0.0509,
+      "f1": 0.0961,
+      "specificity": 0.1633,
+      "youden": 0.0299,
+      "accuracy": 0.1979,
+      "threshold": 0.1468
+    },
+    "TSAR": {
+      "protocol": "Train Réel+pgmpy / Test Réel",
+      "auc": 0.5194,
+      "recall": 0.5159,
+      "precision": 0.0548,
+      "f1": 0.0991,
+      "specificity": 0.5395,
+      "youden": 0.0554,
+      "accuracy": 0.5383,
+      "threshold": 0.0916
+    }
+  }
+}
