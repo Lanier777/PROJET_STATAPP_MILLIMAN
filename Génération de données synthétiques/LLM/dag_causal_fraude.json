@@ -1,21 +1,22 @@
 {
-  "expert_comment": "This DAG captures the causal mechanisms: account age influences transaction behavior, which in turn influences the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
+  "expert_commentary": "This DAG captures causal mechanisms: the age of the account influences the transaction behavior which in turn influences the probability of fraud. Contextual variables (location, device) interact before affecting the fraud.",
   "noeuds": [
     "Account_Age",
     "Location",
     "Previous_Fraudulent_Transactions",
     "Number_of_Transactions_Last_24H",
-    "Device_Used",
     "Time_of_Transaction",
+    "Device_Used",
     "Transaction_Amount",
     "Payment_Method",
+    "Transaction_Type",
     "Fraudulent"
   ],
   "liens": [
     {
       "de": "Account_Age",
       "vers": "Number_of_Transactions_Last_24H",
-      "raison": "Younger accounts have less transaction history"
+      "raison": "A young account has less historical transactions"
     },
     {
       "de": "Location",
@@ -25,32 +26,37 @@
     {
       "de": "Time_of_Transaction",
       "vers": "Transaction_Amount",
-      "raison": "Transaction amount depends on time of transaction"
+      "raison": "Time of transaction influences the transaction amount"
     },
     {
       "de": "Account_Age",
       "vers": "Transaction_Amount",
-      "raison": "Older accounts have more transactions and larger amounts"
+      "raison": "Older accounts have a lower chance of large transactions"
     },
     {
       "de": "Device_Used",
       "vers": "Payment_Method",
-      "raison": "Device used influences payment method"
+      "raison": "Device used depends on context (location, transaction amount)"
+    },
+    {
+      "de": "Location",
+      "vers": "Transaction_Type",
+      "raison": "Location influences the type of transaction"
     },
     {
       "de": "Previous_Fraudulent_Transactions",
       "vers": "Fraudulent",
-      "raison": "Previous fraudulent transactions influence current behavior"
+      "raison": "Historical fraudulent transactions indicate a higher chance of current fraud"
     },
     {
       "de": "Number_of_Transactions_Last_24H",
       "vers": "Fraudulent",
-      "raison": "Abnormal activity is a signal of fraud"
+      "raison": "Abnormal number of transactions in the last 24 hours is a signal of fraud"
     },
     {
       "de": "Transaction_Amount",
       "vers": "Fraudulent",
-      "raison": "Large transaction amounts are a signal of fraud"
+      "raison": "Anomalous transaction amount is a signal of fraud"
     }
   ]
 }
