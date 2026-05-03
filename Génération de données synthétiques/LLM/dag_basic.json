@@ -1,0 +1,57 @@
+{
+  "expert_commentary": "This DAG captures the causal mechanisms: account age influences transaction behavior, which in turn affects the probability of fraud. Contextual variables (location, device) interact with each other before affecting fraud.",
+  "noeuds": [
+    "Account_Age",
+    "Location",
+    "Previous_Fraudulent_Transactions",
+    "Number_of_Transactions_Last_24H",
+    "Time_of_Transaction",
+    "Device_Used",
+    "Transaction_Amount",
+    "Payment_Method",
+    "Fraudulent"
+  ],
+  "liens": [
+    {
+      "de": "Account_Age",
+      "vers": "Number_of_Transactions_Last_24H",
+      "raison": "Younger accounts have less transaction history"
+    },
+    {
+      "de": "Location",
+      "vers": "Device_Used",
+      "raison": "Location influences the device used"
+    },
+    {
+      "de": "Time_of_Transaction",
+      "vers": "Transaction_Amount",
+      "raison": "Transaction amount depends on time of transaction"
+    },
+    {
+      "de": "Account_Age",
+      "vers": "Transaction_Amount",
+      "raison": "Older accounts have higher average transaction amounts"
+    },
+    {
+      "de": "Device_Used",
+      "vers": "Payment_Method",
+      "raison": "Device used influences payment method"
+    },
+    {
+      "de": "Previous_Fraudulent_Transactions",
+      "vers": "Fraudulent",
+      "raison": "Previous fraudulent transactions increase the likelihood of current fraud"
+    },
+    {
+      "de": "Number_of_Transactions_Last_24H",
+      "vers": "Fraudulent",
+      "raison": "Abnormal transaction activity is a signal of fraud"
+    },
+    {
+      "de": "Transaction_Amount",
+      "vers": "Fraudulent",
+      "raison": "Anomalous transaction amounts are a signal of fraud"
+    }
+  ],
+  "mecanismes_generation": "Dans ce diagramme de causalité (DAG), chaque lien représente une relation causale entre les différents nœuds, chacun représentant un facteur ou une caractéristique. Voici une explication détaillée des mécanismes causaux et des raisons qui ont guidé chaque choix structurel :\n\n1. Account_Age → Number_of_Transactions_Last_24H : Les comptes plus jeunes ont moins d'histoire de transactions, car ils sont récents et n'ont pas eu le temps de réaliser autant de transactions que les comptes plus anciens.\n2. Location → Device_Used : La localisation influe sur le dispositif utilisé pour effectuer des transactions, car certains types de dispositifs sont plus populaires dans certaines régions du monde.\n3. Time_of_Transaction → Transaction_Amount : L'heure de la transaction influence l'importance de la transaction, car les transactions effectuées à des heures particulières peuvent être associées à des événements spécifiques (par exemple, des pics d'activité lors des heures de pointe).\n4. Account_Age → Transaction_Amount : Les comptes plus anciens ont un historique de transactions plus long et donc une moyenne de transaction plus élevée car les utilisateurs ont plus de confiance dans leur compte et effectuent des transactions plus importantes.\n5. Device_Used → Payment_Method : Le dispositif utilisé pour effectuer une transaction influe sur la méthode de paiement, car certains types de dispositifs sont plus adaptés à certaines méthodes de paiement (par exemple, les smartphones sont souvent utilisés pour des transactions en ligne).\n6. Previous_Fraudulent_Transactions → Fraudulent : Les transactions frauduleuses antérieures augmentent la probabilité d'une transaction frauduleuse actuelle, car un comportement frauduleux est souvent répété par le même utilisateur.\n7. Number_of_Transactions_Last_24H → Fraudulent : L'activité de transactions anormale dans les 24 heures précédentes est un signal de fraude, car une activité excessive ou irrégulière peut indiquer des activités frauduleuses.\n8. Transaction_Amount → Fraudulent : Les montants de transaction anormaux sont un signal de fraude, car des montants excessifs ou irréguliers peuvent indiquer des activités frauduleuses.\n\nEn synthèse, le DAG représente les relations causales entre différents facteurs qui peuvent être associés à la fraude bancaire. Les choix structurels ont été guidés par une analyse de l'impact que chaque facteur peut avoir sur la probabilité de fraude. Par exemple, des comptes plus jeunes ont moins d'histoire de transactions et sont donc plus susceptibles de faire des transactions anormales, ce qui peut être un signal de fraude. De même, les montants de transaction anormaux peuvent également indiquer des activités frauduleuses. Enfin, la localisation et le dispositif utilisé pour effectuer une transaction peuvent également avoir un impact sur la probabilité de fraude, car certains types de transactions sont plus susceptibles d'être frauduleuses que d'autres."
+}

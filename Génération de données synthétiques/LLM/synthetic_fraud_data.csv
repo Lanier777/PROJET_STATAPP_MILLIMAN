@@ -1,6 +1,0 @@
-Transaction_ID,User_ID,Transaction_Amount,Transaction_Type,Time_of_Transaction,Device_Used,Location,Previous_Fraudulent_Transactions,Account_Age,Number_of_Transactions_Last_24H,Payment_Method,Fraudulent
-T7,4772,544.81,Bill Payment,2.0,Tablet,Boston,3,6,9,UPI,1
-T28,3433,4519.04,Bill Payment,13.0,Tablet,Boston,0,81,10,Credit Card,1
-T44,3047,4413.05,Bank Transfer,21.0,Desktop,Boston,4,46,11,Credit Card,1
-T69,3363,3517.65,Bill Payment,0.0,Desktop,Boston,2,29,8,UPI,1
-T74,4417,1440.79,Online Purchase,15.0,Tablet,Miami,2,16,1,Net Banking,1

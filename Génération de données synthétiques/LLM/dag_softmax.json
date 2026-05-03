@@ -1,0 +1,98 @@
+{
+  "noeuds": [
+    "Transaction_Amount",
+    "Transaction_Type",
+    "Time_of_Transaction",
+    "Device_Used",
+    "Location",
+    "Previous_Fraudulent_Transactions",
+    "Account_Age",
+    "Number_of_Transactions_Last_24H",
+    "Payment_Method",
+    "Fraudulent"
+  ],
+  "liens": [
+    {
+      "de": "Location",
+      "vers": "Fraudulent",
+      "raison": "Plusieurs villes ont un taux élevé de fraude, ce qui peut indiquer une plus grande probabilité de fraude dans ces villes",
+      "score_brut": 1.5,
+      "confiance": 0.2599317402337847,
+      "confiance_pct": "26.0%"
+    },
+    {
+      "de": "Payment_Method",
+      "vers": "Fraudulent",
+      "raison": "Certains moyens de paiement ont un taux élevé de fraude, ce qui peut indiquer une plus grande probabilité de fraude lorsqu'ils sont utilisés",
+      "score_brut": 1.5,
+      "confiance": 0.2599317402337847,
+      "confiance_pct": "26.0%"
+    },
+    {
+      "de": "Transaction_Type",
+      "vers": "Fraudulent",
+      "raison": "Certains types de transactions ont un taux élevé de fraude, ce qui peut indiquer une plus grande probabilité de fraude lorsqu'ils sont effectués",
+      "score_brut": 1.5,
+      "confiance": 0.2599317402337847,
+      "confiance_pct": "26.0%"
+    },
+    {
+      "de": "Device_Used",
+      "vers": "Fraudulent",
+      "raison": "Certains types d'appareils ont un taux élevé de fraude, ce qui peut indiquer une plus grande probabilité de fraude lorsqu'ils sont utilisés",
+      "score_brut": 1.0,
+      "confiance": 0.09562354333992522,
+      "confiance_pct": "9.6%"
+    },
+    {
+      "de": "Transaction_Type",
+      "vers": "Device_Used",
+      "raison": "Type de transaction peut influencer le type d'appareil utilisé",
+      "score_brut": 0.75,
+      "confiance": 0.05799861082602443,
+      "confiance_pct": "5.8%"
+    },
+    {
+      "de": "Time_of_Transaction",
+      "vers": "Fraudulent",
+      "raison": "Heures de transactions plus tardives peuvent indiquer une plus grande probabilité de fraude",
+      "score_brut": 0.02110519504151239,
+      "confiance": 0.013499186833398924,
+      "confiance_pct": "1.3%"
+    },
+    {
+      "de": "Account_Age",
+      "vers": "Fraudulent",
+      "raison": "Plus vieux compte, plus probabilité de fraude",
+      "score_brut": 0.018608402668599117,
+      "confiance": 0.013431945527253679,
+      "confiance_pct": "1.3%"
+    },
+    {
+      "de": "Transaction_Amount",
+      "vers": "Fraudulent",
+      "raison": "Plus grand montant de transaction, plus probabilité de fraude",
+      "score_brut": 0.016521577452925373,
+      "confiance": 0.013376002107357496,
+      "confiance_pct": "1.3%"
+    },
+    {
+      "de": "Number_of_Transactions_Last_24H",
+      "vers": "Fraudulent",
+      "raison": "Plus grand nombre de transactions dans les 24 heures, plus probabilité de fraude",
+      "score_brut": 0.011629756484733805,
+      "confiance": 0.013245774182670715,
+      "confiance_pct": "1.3%"
+    },
+    {
+      "de": "Previous_Fraudulent_Transactions",
+      "vers": "Fraudulent",
+      "raison": "Plus de transactions frauduleuses précédentes, plus probabilité de fraude",
+      "score_brut": 0.003406786526461481,
+      "confiance": 0.013029716482015619,
+      "confiance_pct": "1.3%"
+    }
+  ],
+  "commentaire_expert": "Le graphe causal comprend des variables quantitatives et qualitatives. Les variables quantitatives comprennent le montant de la transaction, l'heure de la transaction, le nombre de transactions précédentes frauduleuses, l'âge du compte, le nombre de transactions dans les 24 heures et l'heure de la transaction. Les variables qualitatives comprennent le type de transaction, l'appareil utilisé, la méthode de paiement et la localisation. Le graphe montre que certains types de transactions, appareils, méthodes de paiement et localisations ont un taux élevé de fraude, ce qui peut indiquer une plus grande probabilité de fraude lorsqu'ils sont utilisés. De plus, le nombre de transactions précédentes frauduleuses, l'âge du compte, le nombre de transactions dans les 24 heures et l'heure de la transaction peuvent également être des facteurs clés pour prédire la probabilité de fraude.",
+  "mecanismes_generation": "Le DAG (Diagramme de causalité acyclique) que vous avez généré représente les relations causales entre différents facteurs et la probabilité de fraude bancaire dans un compte. Chaque lien dans le DAG est associé à un score de confiance, qui indique la probabilité de l'existence d'une relation causale entre les nœuds reliés.\n\n1. Les mécanismes causaux sous-jacents :\n   - Location → Fraudulent (26.0%) : La localisation peut avoir un impact sur la probabilité de fraude car certaines villes ont un taux élevé de fraude bancaire.\n   - Payment_Method → Fraudulent (26.0%) : Le moyen de paiement utilisé peut également avoir un impact sur la probabilité de fraude, car certains moyens de paiement ont un taux élevé de fraude.\n   - Transaction_Type → Fraudulent (26.0%) : Le type de transaction peut également avoir un impact sur la probabilité de fraude, car certains types de transactions ont un taux élevé de fraude.\n   - Device_Used → Fraudulent (9.6%) : L'appareil utilisé pour effectuer la transaction peut également avoir un impact sur la probabilité de fraude, car certains appareils ont un taux élevé de fraude.\n   - Transaction_Type → Device_Used (5.8%) : Le type de transaction peut influencer le type d'appareil utilisé, par exemple, certaines transactions peuvent nécessiter l'utilisation d'un appareil spécifique.\n   - Time_of_Transaction → Fraudulent (1.3%) : Les heures plus tardives des transactions peuvent indiquer une plus grande probabilité de fraude car les heures plus tardives sont souvent associées à des activités frauduleuses.\n   - Account_Age → Fraudulent (1.3%) : Le temps passé depuis la création du compte peut également avoir un impact sur la probabilité de fraude, car les comptes plus vieux peuvent être plus susceptibles de fraudes.\n   - Transaction_Amount → Fraudulent (1.3%) : Le montant de transaction peut également avoir un impact sur la probabilité de fraude, car les transactions plus importantes sont souvent associées à des activités frauduleuses.\n   - Number_of_Transactions_Last_24H → Fraudulent (1.3%) : Le nombre de transactions dans les 24 heures peut également avoir un impact sur la probabilité de fraude, car le nombre plus élevé de transactions peut indiquer des activités frauduleuses.\n   - Previous_Fraudulent_Transactions → Fraudulent (1.3%) : Les transactions précédentes frauduleuses peuvent également avoir un impact sur la probabilité de fraude, car les comptes ayant déjà subi des fraudes sont plus susceptibles de subir d'autres fraudes.\n\n2. La direction causale retenue et sa justification :\n   - Les liens ont été orientés dans le sens où il est supposé que la variable source a un impact sur la variable cible. Par exemple, Location → Fraudulent car les villes peuvent avoir un impact sur la probabilité de fraude.\n\n3. L'influence du score softmax sur la priorité accordée à ce lien :\n   - Le score softmax a été utilisé pour déterminer la confiance dans chaque relation causale et ainsi prioriser les relations les plus probables. Par exemple, Location → Fraudulent a un score de 26.0%, ce qui indique que cette relation est considérée comme très probable.\n\nEn synthèse, le softmax a modifié la structure causale initiale en permettant de déterminer les relations causales les plus probables entre les différents facteurs et la fraude bancaire. Les liens avec des scores élevés ont été priorisés dans le DAG, ce qui permet d'identifier les facteurs les plus importants pour prédire la fraude bancaire."
+}
