@@ -1,7 +1,15 @@
-# PROJET_STATAPP_MILLIMAN
-## Projet de génération des données synthétiques avec du LLM en assurance
+# 
+## 
 
-###  Résumé du projet
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Georgia&size=35&color=8B0000&center=true&width=900&height=60&lines=PROJET_STATAPP_MILLIMAN%3A&repeat=false"/>
+</p>
+
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Georgia&size=30&color=8B0000&center=true&width=1000&height=60&lines=G%C3%A9n%C3%A9ration+de+donn%C3%A9es+synth%C3%A9tiques+%C3%A0+partir+des+LLM+en+assurance&repeat=false"/>
+</p>
+
+###  $$\color{darkred}{\textbf{Résumé du projet}}$$
 
 Ce projet explore l’utilisation des **modèles de langage (LLM)** open source pour **générer des données synthétiques réalistes** dans le secteur de l’assurance.  
 L’objectif est de démontrer comment ces modèles peuvent pallier les limites des données réelles(sensibilité, déséquilibre, rareté) tout en améliorant la **détection de fraude**, la **segmentation des risques** et le **ciblage client**.  
@@ -9,7 +17,7 @@ Ce travail s’inscrit dans une démarche d’**innovation responsable**, où l�
 
 ---
 
-### Description du sujet
+### $$\color{darkred}{\textbf{Description du sujet}}$$
 
 Dans le secteur de l’assurance, la donnée constitue un **actif stratégique** pour l’évaluation du risque, la prévention de la fraude et la personnalisation des produits.  
 Cependant, plusieurs défis persistent dans l’exploitation de ces données :
@@ -22,12 +30,12 @@ La **génération de données synthétiques** se présente comme une solution in
 
 ---
 
-### Objectifs du projet
+### $$\color{darkred}{\textbf{Objectifs du projet}}$$
 L’objectif principal est de **mettre en œuvre et d’évaluer des techniques de génération de données synthétiques** à l’aide de modèles de langage (LLM) open source.  
 
 ---
 
-### Plan du projet 
+### $$\color{darkred}{\textbf{Plan du projet}}$$
 Le projet contient 3 dossiers dont un dossier annexe. 
    
    1. Analyse descriptive "Fraud Detection Dataset"
